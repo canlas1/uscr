@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* CSS Document */
+img, div, a, input { 
+	behavior: url(iepngfix.htc); 
+}

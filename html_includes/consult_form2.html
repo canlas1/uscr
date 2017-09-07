@@ -1,0 +1,507 @@
+<?php 
+$_SERVER["STATE_ABBREVIATIONS"]["AK"] = "Alaska";
+$_SERVER["STATE_ABBREVIATIONS"]["AL"] = "Alabama";
+$_SERVER["STATE_ABBREVIATIONS"]["AR"] = "Arkansas";
+$_SERVER["STATE_ABBREVIATIONS"]["AZ"] = "Arizona";
+$_SERVER["STATE_ABBREVIATIONS"]["CA"] = "California";
+$_SERVER["STATE_ABBREVIATIONS"]["CO"] = "Colorado";
+$_SERVER["STATE_ABBREVIATIONS"]["CT"] = "Connecticut";
+$_SERVER["STATE_ABBREVIATIONS"]["DC"] = "Washington DC";
+$_SERVER["STATE_ABBREVIATIONS"]["DE"] = "Deleware";
+$_SERVER["STATE_ABBREVIATIONS"]["FL"] = "Florida";
+$_SERVER["STATE_ABBREVIATIONS"]["GA"] = "Georga";
+$_SERVER["STATE_ABBREVIATIONS"]["GU"] = "Guam";
+$_SERVER["STATE_ABBREVIATIONS"]["HI"] = "Hawaii";
+$_SERVER["STATE_ABBREVIATIONS"]["IA"] = "Iowa";
+$_SERVER["STATE_ABBREVIATIONS"]["ID"] = "Idago";
+$_SERVER["STATE_ABBREVIATIONS"]["IL"] = "Illinois";
+$_SERVER["STATE_ABBREVIATIONS"]["IN"] = "Indiana";
+$_SERVER["STATE_ABBREVIATIONS"]["KS"] = "Kansas";
+$_SERVER["STATE_ABBREVIATIONS"]["KY"] = "Kentucky";
+$_SERVER["STATE_ABBREVIATIONS"]["LA"] = "Louisiana";
+$_SERVER["STATE_ABBREVIATIONS"]["MA"] = "Massachussetts";
+$_SERVER["STATE_ABBREVIATIONS"]["MD"] = "Maryland";
+$_SERVER["STATE_ABBREVIATIONS"]["ME"] = "Maine";
+$_SERVER["STATE_ABBREVIATIONS"]["MI"] = "Michigan";
+$_SERVER["STATE_ABBREVIATIONS"]["MN"] = "Minnesota";
+$_SERVER["STATE_ABBREVIATIONS"]["MO"] = "Missouri";
+$_SERVER["STATE_ABBREVIATIONS"]["MS"] = "Mississippi";
+$_SERVER["STATE_ABBREVIATIONS"]["MT"] = "Montana";
+$_SERVER["STATE_ABBREVIATIONS"]["NC"] = "North Carolina";
+$_SERVER["STATE_ABBREVIATIONS"]["ND"] = "North Dakota";
+$_SERVER["STATE_ABBREVIATIONS"]["NE"] = "Nebraska";
+$_SERVER["STATE_ABBREVIATIONS"]["NH"] = "New Hampshire";
+$_SERVER["STATE_ABBREVIATIONS"]["NJ"] = "New Jersey";
+$_SERVER["STATE_ABBREVIATIONS"]["NM"] = "New Mexico";
+$_SERVER["STATE_ABBREVIATIONS"]["NV"] = "Nevada";
+$_SERVER["STATE_ABBREVIATIONS"]["NY"] = "New York";
+$_SERVER["STATE_ABBREVIATIONS"]["OH"] = "Ohio";
+$_SERVER["STATE_ABBREVIATIONS"]["OK"] = "Oklahoma";
+$_SERVER["STATE_ABBREVIATIONS"]["PA"] = "Pennsylvania";
+$_SERVER["STATE_ABBREVIATIONS"]["PR"] = "Puerto Rico";
+$_SERVER["STATE_ABBREVIATIONS"]["RI"] = "Rhode Island";
+$_SERVER["STATE_ABBREVIATIONS"]["SC"] = "South Carolina";
+$_SERVER["STATE_ABBREVIATIONS"]["SD"] = "South Dakota";
+$_SERVER["STATE_ABBREVIATIONS"]["TN"] = "Tennessee";
+$_SERVER["STATE_ABBREVIATIONS"]["TX"] = "Texas";
+$_SERVER["STATE_ABBREVIATIONS"]["UT"] = "Utah";
+$_SERVER["STATE_ABBREVIATIONS"]["VA"] = "Virginia";
+$_SERVER["STATE_ABBREVIATIONS"]["VI"] = "Virgin Islands";
+$_SERVER["STATE_ABBREVIATIONS"]["VT"] = "Vermont";
+$_SERVER["STATE_ABBREVIATIONS"]["WA"] = "Washington";
+$_SERVER["STATE_ABBREVIATIONS"]["WV"] = "West Virginia";
+$_SERVER["STATE_ABBREVIATIONS"]["WY"] = "Wyoming";
+$STATES = '<SELECT class="textlistform" name="state" id="state" style="float:right; width:120px;"><option value="" SELECTED ></option>';
+foreach($_SERVER["STATE_ABBREVIATIONS"] AS $STATE_ABBREVIATION=>$STATE_NAME){
+	$STATES .= "<option value=\"${STATE_ABBREVIATION}\" SELECTED >${STATE_NAME}</option>";
+}
+$STATES .= "</SELECT>";
+
+?>
+	<div id="leftSideSpace">
+	</div>
+
+	<div id="leftSideIfScroll">
+    	<div class="toolNumber">1.908.264.4200</div>
+    	<div class="toolTitle">FREE CONSULTATION</div>
+        <div class="formText">
+            	<form action="process_lead.php" method="post">
+                <table width="205" cellpadding="0" cellspacing="0" border="0" align="right">
+                <tr>
+                <td colspan="3"><h3>PLEASE FILL OUT FIELDS BELOW</h3></td>
+                </tr>                
+                <tr>
+                <td>First Name:</td>
+                <td width="5"></td>
+                <td><input id="first_name" class="textfeildform" name="first_name" size="15" maxlength="100" style="width:auto; float:right;"/></td>
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td>Last Name:</td>
+                <td></td>
+                <td><input id="last_name" class="textfeildform" name="last_name" size="15" maxlength="100" style="width:auto; float:right;"/></td>
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td>State:</td>
+                <td></td>
+                <td><?PHP ECHO $STATES; ?>
+                </td>
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+ 				<tr>
+                <td>Home Phone:</td>
+                <td></td>
+                <td><input id="phone" class="textfeildform" name="phone" size="15" maxlength="100" style="width:auto; float:right;"/></td>
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td>Cell Phone:</td>
+                <td></td>
+                <td><input id="cell_phone" class="textfeildform" name="cell_phone" size="15" maxlength="100" value="" style="width:auto; float:right;"/></td>
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td>Work Phone:</td>
+                <td></td>
+                <td><input id="work_phone" class="textfeildform" name="work_phone" size="15" maxlength="100" value="" style="width:auto; float:right;"/></td>
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+
+                <tr>
+                <td>Email:</td>
+                <td></td>
+                <td><input id="email" class="textfeildform" name="email" size="15" maxlength="100" style="width:auto; float:right;"/></td>
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">How much unsecured debt do you have?</td>
+                </tr>
+                <tr>
+                <td height="2" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">
+                <select class="textlistformlong" name="debt_amount" id="debt_amount" style="width:205px; float:right;">
+				<option selected="select" value="">Select Amount</option>
+				<option value="$7,500 - 10,000">$7,500 - 10,000</option>
+				<option value="$10,000 - 15,000">$10,000 - 15,000</option>
+				<option value="$15,000 - 20,000">$15,000 - 20,000</option>
+				<option value="$20,000 - 25,000">$20,000 - 25,000</option>
+				<option value="$25,000 - 30,000">$25,000 - 30,000</option>
+				<option value="$30,000 - 35,000">$30,000 - 35,000</option>
+				<option value="$35,000 - 40,000">$35,000 - 40,000</option>
+				<option value="$40,000 - 45,000">$40,000 - 45,000</option>
+				<option value="$45,000 - 50,000">$45,000 - 50,000</option>
+				<option value="$50,000 - 55,000">$50,000 - 55,000</option>
+				<option value="$55,000 - 60,000">$55,000 - 60,000</option>
+				<option value="$60,000 - 65,000">$60,000 - 65,000</option>
+				<option value="$65,000 - 70,000">$65,000 - 70,000</option>
+				<option value="$70,000 - 75,000">$70,000 - 75,000</option>
+				<option value="$75,000+">$75,000+</option>
+				</select>
+                </td>
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">Preferred Method of Contact?</td>
+				</tr>
+                <tr>
+                <td height="2" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">
+                <input type="radio" value="email" name="preferred_contact" id="preferred_contact" />Email
+        		<input type="radio" value="home" name="preferred_contact" id="preferred_contact" />Home
+            	<input type="radio" value="work" name="preferred_contact" id="preferred_contact" />Work
+            	<input type="radio" value="cell" name="preferred_contact" id="preferred_contact" />Cell
+            	</td>                
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">Best time to Call?</td>
+				</tr>
+                <tr>
+                <td height="2" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">
+                <input type="radio" value="Morning" name="call_time" id="call_time" />Morning
+        		<input type="radio" value="Afternoon" name="call_time" id="call_time" />Afternoon
+            	<input type="radio" value="Evening" name="call_time" id="call_time" />Evening 
+            	</td>                
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">How did you hear about us?</td>
+				</tr>
+                <tr>
+                <td height="2" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">
+                <select class="textlistformlong" name="hear" id="hear" style="width:205px;">
+				<option selected="" value="">Please Select</option>
+				<option>Television</option>
+				<option>Radio</option>
+				<option>Internet</option>
+				<option>Print</option>
+				<option>Other</option>
+				</select>
+            	</td>                
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3">Comment: (0ptional)</td>
+				</tr>
+                <tr>
+                <td height="2" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3"><textarea name="comments" id="comments" cols="5" rows="5" class="formText" style="width:200px;"></textarea></td>       
+                </tr>
+                <tr>
+                <td height="12" colspan="3"></td>
+                </tr>
+                <tr>
+                <td colspan="3" align="center"><input class="button"  type="submit" value="Send Request" name="Submit" id="submit" /></td>
+                </tr>
+                <tr>
+                <td height="20" colspan="3"></td>
+                </tr>           
+                </table>
+                </form>				
+        	</div>
+    </div>
+
+    
+<span id="script_source"><script type="text/javascript"><!--
+// Script by: www.jtricks.com
+// Version: 20071017
+// Latest version:
+// www.jtricks.com/javascript/navigation/floating.html
+ 
+var floatingMenuId = 'leftSideIfScroll';
+var floatingMenu =
+{
+	targetY: 300,
+    targetX: 45,
+
+    hasInner: typeof(window.innerWidth) == 'number',
+    hasElement: typeof(document.documentElement) == 'object'
+        && typeof(document.documentElement.clientWidth) == 'number',
+
+    menu:
+        document.getElementById
+        ? document.getElementById(floatingMenuId)
+        : document.all
+          ? document.all[floatingMenuId]
+          : document.layers[floatingMenuId]
+};
+
+
+floatingMenu.move = function ()
+{
+    floatingMenu.menu.style.left = floatingMenu.nextX + 'px';
+    floatingMenu.menu.style.top = floatingMenu.nextY + 'px';
+}
+
+floatingMenu.computeShifts = function ()
+{
+    var de = document.documentElement;
+
+    floatingMenu.shiftX =  
+        floatingMenu.hasInner  
+        ? pageXOffset  
+        : floatingMenu.hasElement  
+          ? de.scrollLeft  
+          : document.body.scrollLeft;  
+    if (floatingMenu.targetX < 0)
+    {
+        floatingMenu.shiftX +=
+            floatingMenu.hasElement
+            ? de.clientWidth
+            : document.body.clientWidth;
+    }
+
+    floatingMenu.shiftY = 
+        floatingMenu.hasInner
+        ? pageYOffset
+        : floatingMenu.hasElement
+          ? de.scrollTop
+          : document.body.scrollTop;
+    if (floatingMenu.targetY < 0)
+    {
+        if (floatingMenu.hasElement && floatingMenu.hasInner)
+        {
+            // Handle Opera 8 problems
+            floatingMenu.shiftY +=
+                de.clientHeight > window.innerHeight
+                ? window.innerHeight
+                : de.clientHeight
+        }
+        else
+        {
+            floatingMenu.shiftY +=
+                floatingMenu.hasElement
+                ? de.clientHeight
+                : document.body.clientHeight;
+        }
+    }
+}
+
+floatingMenu.calculateCornerX = function()
+{
+    if (floatingMenu.targetX != 'center')
+        return floatingMenu.shiftX + floatingMenu.targetX;
+
+    var width = parseInt(floatingMenu.menu.offsetWidth);
+
+    var cornerX =
+        floatingMenu.hasElement
+        ? (floatingMenu.hasInner
+           ? pageXOffset
+           : document.documentElement.scrollLeft) + 
+          (document.documentElement.clientWidth - width)/2
+        : document.body.scrollLeft + 
+          (document.body.clientWidth - width)/2;
+    return cornerX;
+};
+
+floatingMenu.calculateCornerY = function()
+{
+    if (floatingMenu.targetY != 'center')
+        return floatingMenu.shiftY + floatingMenu.targetY;
+
+    var height = parseInt(floatingMenu.menu.offsetHeight);
+
+    // Handle Opera 8 problems
+    var clientHeight = 
+        floatingMenu.hasElement && floatingMenu.hasInner
+        && document.documentElement.clientHeight 
+            > window.innerHeight
+        ? window.innerHeight
+        : document.documentElement.clientHeight
+
+    var cornerY =
+        floatingMenu.hasElement
+        ? (floatingMenu.hasInner  
+           ? pageYOffset
+           : document.documentElement.scrollTop) + 
+          (clientHeight - height)/2
+        : document.body.scrollTop + 
+          (document.body.clientHeight - height)/2;
+    return cornerY;
+};
+
+floatingMenu.doFloat = function()
+{
+    var stepX, stepY;
+
+    floatingMenu.computeShifts();
+
+    var cornerX = floatingMenu.calculateCornerX();
+
+    var stepX = (cornerX - floatingMenu.nextX) * .07;
+    if (Math.abs(stepX) < .5)
+    {
+        stepX = cornerX - floatingMenu.nextX;
+    }
+
+    var cornerY = floatingMenu.calculateCornerY();
+
+    var stepY = (cornerY - floatingMenu.nextY) * .07;
+    if (Math.abs(stepY) < .5)
+    {
+        stepY = cornerY - floatingMenu.nextY;
+    }
+
+    if (Math.abs(stepX) > 0 ||
+        Math.abs(stepY) > 0)
+    {
+        floatingMenu.nextX += stepX;
+        floatingMenu.nextY += stepY;
+        floatingMenu.move();
+    }
+
+    setTimeout('floatingMenu.doFloat()', 20);
+};
+
+// addEvent designed by Aaron Moore
+floatingMenu.addEvent = function(element, listener, handler)
+{
+    if(typeof element[listener] != 'function' || 
+       typeof element[listener + '_num'] == 'undefined')
+    {
+        element[listener + '_num'] = 0;
+        if (typeof element[listener] == 'function')
+        {
+            element[listener + 0] = element[listener];
+            element[listener + '_num']++;
+        }
+        element[listener] = function(e)
+        {
+            var r = true;
+            e = (e) ? e : window.event;
+            for(var i = element[listener + '_num'] -1; i >= 0; i--)
+            {
+                if(element[listener + i](e) == false)
+                    r = false;
+            }
+            return r;
+        }
+    }
+
+    //if handler is not already stored, assign it
+    for(var i = 0; i < element[listener + '_num']; i++)
+        if(element[listener + i] == handler)
+            return;
+    element[listener + element[listener + '_num']] = handler;
+    element[listener + '_num']++;
+};
+
+floatingMenu.init = function()
+{
+    floatingMenu.initSecondary();
+    floatingMenu.doFloat();
+};
+
+// Some browsers init scrollbars only after
+// full document load.
+floatingMenu.initSecondary = function()
+{
+    floatingMenu.computeShifts();
+    floatingMenu.nextX = floatingMenu.calculateCornerX();
+    floatingMenu.nextY = floatingMenu.calculateCornerY();
+    floatingMenu.move();
+}
+
+if (document.layers)
+    floatingMenu.addEvent(window, 'onload', floatingMenu.init);
+else
+{
+    floatingMenu.init();
+    floatingMenu.addEvent(window, 'onload',
+        floatingMenu.initSecondary);
+}
+
+//--></script>
+</span>
+
+<script type="text/javascript"><!--
+function move_upper_left()
+{
+floatingMenu.targetX=10;
+floatingMenu.targetY=10;
+}
+
+function move_upper_center()
+{
+floatingMenu.targetX='center';
+floatingMenu.targetY=10;
+}
+
+function move_upper_right()
+{
+floatingMenu.targetX=-250;
+floatingMenu.targetY=10;
+}
+
+function move_center_left()
+{
+floatingMenu.targetX=10;
+floatingMenu.targetY='center';
+}
+
+function move_center_center()
+{
+floatingMenu.targetX='center';
+floatingMenu.targetY='center';
+}
+
+function move_center_right()
+{
+floatingMenu.targetX=-250;
+floatingMenu.targetY='center';
+}
+
+function move_lower_left()
+{
+floatingMenu.targetX=10;
+floatingMenu.targetY=-110;
+}
+
+function move_lower_center()
+{
+floatingMenu.targetX='center';
+floatingMenu.targetY=-110;
+}
+
+function move_lower_right()
+{
+floatingMenu.targetX=-250;
+floatingMenu.targetY=-110;
+}
+//--></script>
